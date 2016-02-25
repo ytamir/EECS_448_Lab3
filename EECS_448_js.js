@@ -15,3 +15,7 @@ function myFunc(a, b)
       alert("Please make sure that the values for your passwords are the same");
     }
 }
+function next()
+{
+
+}

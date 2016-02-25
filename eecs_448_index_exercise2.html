@@ -1,21 +1,72 @@
 <html>
 	<head>
-		<script type="text/javascript"
-								src="EECS_448_js.js">
+		<script type="text/javascript" src="EECS_448_js.js">
 				</script>
 		<title> LEBRON JAMES IS THE GOAT </title>
 	</head>
 
 	<body>
 
-			<img src="Lebron1.jpg" height="300" width="500">
+			<img id= "myImage" onclick="next()" src="Lebron1.jpg" height="300" width="500">
 
-			a: <input type="string" name="a" id="a"><br>
-			b: <input type="string" name="b" id="b"><br>
-		  <button onclick="myFunc(document.getElementById('a').value,document.getElementById('b').value)">Validate</button>
+
+		  <button onclick="prev()">Previous</button>
+			<button onclick="next()">Next</button>
 
 
 </form>
+<script>
+function next() {
+	var image = document.getElementById('myImage');
+
+   if (image.getAttribute('src')=="Lebron1.jpg") {
+	   image.src = "Lebron2.jpg";
+	   return;
+   }
+   if (image.getAttribute('src')=="Lebron2.jpg") {
+	 image.src = "Lebron3.jpg";
+	 return;
+  }
+  if (image.getAttribute('src')=="Lebron3.jpg") {
+	 image.src = "Lebron4.jpg";
+	 return;
+  }
+  if (image.getAttribute('src')=="Lebron4.jpg") {
+	 image.src = "Lebron5.jpg";
+	 return;
+  }
+  if (image.getAttribute('src')=="Lebron5.jpg") {
+	 image.src = "Lebron1.jpg";
+	 return;
+  }
+
+}
+function prev() {
+	var image = document.getElementById('myImage');
+
+   if (image.getAttribute('src')=="Lebron1.jpg") {
+	   image.src = "Lebron5.jpg";
+	   return;
+   }
+   if (image.getAttribute('src')=="Lebron2.jpg") {
+	 image.src = "Lebron1.jpg";
+	 return;
+  }
+  if (image.getAttribute('src')=="Lebron3.jpg") {
+	 image.src = "Lebron2.jpg";
+	 return;
+  }
+  if (image.getAttribute('src')=="Lebron4.jpg") {
+	 image.src = "Lebron3.jpg";
+	 return;
+  }
+  if (image.getAttribute('src')=="Lebron5.jpg") {
+	 image.src = "Lebron4.jpg";
+	 return;
+  }
+}
+
+</script
 
 	</body>
 </html>
